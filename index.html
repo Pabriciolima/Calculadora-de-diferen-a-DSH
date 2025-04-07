@@ -38,6 +38,9 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         h1 {
@@ -80,6 +83,7 @@
             border-radius: 12px;
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
+            flex: 1;
         }
 
         .calculation-box {
@@ -320,6 +324,15 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.3);
         }
 
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: var(--text-color);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
             .features-grid {
                 grid-template-columns: 1fr;
@@ -372,6 +385,10 @@
             <!-- Cálculos serão adicionados aqui -->
         </div>
     </div>
+
+    <footer>
+        Criado por Pabricio Lima &copy; 2025
+    </footer>
 
     <div class="floating-btn" id="scrollToTop" title="Voltar ao topo">
         <i class="fas fa-arrow-up"></i>
