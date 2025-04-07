@@ -38,9 +38,6 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             transition: all 0.3s ease;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
         h1 {
@@ -75,10 +72,6 @@
 
         .theme-toggle:hover {
             transform: rotate(30deg);
-        }
-
-        .main-container {
-            flex: 1;
         }
 
         .container {
@@ -305,7 +298,7 @@
 
         .floating-btn {
             position: fixed;
-            bottom: 80px;
+            bottom: 30px;
             right: 30px;
             width: 60px;
             height: 60px;
@@ -327,96 +320,66 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.3);
         }
 
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 15px;
-            color: var(--text-color);
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-
         @media (max-width: 768px) {
             .features-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .floating-btn {
-                bottom: 70px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="main-container">
-        <div class="container">
-            <div class="header-container">
-                <div>
-                    <h1><i class="fas fa-calculator"></i> Calculadora DSH Premium</h1>
-                    <p class="subtitle">Compare valores entre fornecedores com precisão</p>
-                </div>
-                <button class="theme-toggle" id="themeToggle" title="Alternar modo claro/escuro">
-                    <i class="fas fa-moon"></i>
-                </button>
+    <div class="container">
+        <div class="header-container">
+            <div>
+                <h1><i class="fas fa-calculator"></i> Calculadora DSH Premium</h1>
+                <p class="subtitle">Compare valores entre fornecedores com precisão</p>
             </div>
+            <button class="theme-toggle" id="themeToggle" title="Alternar modo claro/escuro">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>Rápido</h3>
-                    <p>Cálculos instantâneos com um clique</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Inteligente</h3>
-                    <p>Gráficos comparativos automáticos</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-palette"></i></div>
-                    <h3>Personalizado</h3>
-                    <p>Modo claro e escuro para seu conforto</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3>Multiplos</h3>
-                    <p>Até 8 cálculos simultâneos</p>
-                </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Rápido</h3>
+                <p>Cálculos instantâneos com um clique</p>
             </div>
-
-            <div class="add-btn-container">
-                <button id="addCalculation" class="btn-secondary">
-                    <i class="fas fa-plus-circle"></i> Adicionar Cálculo
-                </button>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Inteligente</h3>
+                <p>Gráficos comparativos automáticos</p>
             </div>
-            
-            <div id="calculationsContainer">
-                <!-- Cálculos serão adicionados aqui -->
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-palette"></i></div>
+                <h3>Personalizado</h3>
+                <p>Modo claro e escuro para seu conforto</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                <h3>Multiplos</h3>
+                <p>Até 8 cálculos simultâneos</p>
             </div>
         </div>
-    </div>
 
-    <footer>
-        Criado por Pabricio Lima &copy; 2025
-    </footer>
+        <div class="add-btn-container">
+            <button id="addCalculation" class="btn-secondary">
+                <i class="fas fa-plus-circle"></i> Adicionar Cálculo
+            </button>
+        </div>
+        
+        <div id="calculationsContainer">
+            <!-- Cálculos serão adicionados aqui -->
+        </div>
+    </div>
 
     <div class="floating-btn" id="scrollToTop" title="Voltar ao topo">
         <i class="fas fa-arrow-up"></i>
     </div>
-
+<footer>
+    criado por Pabricio lima 2025
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // Seu código JavaScript existente aqui
-        // Certifique-se de que todas as funções de cálculo estão definidas
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Adicione aqui o código de inicialização se necessário
-        });
-        
-        // Exemplo de função de cálculo (substitua pelo seu código real)
-        function calculate() {
-            // Sua lógica de cálculo aqui
-            console.log("Cálculo executado com sucesso!");
-        }
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
